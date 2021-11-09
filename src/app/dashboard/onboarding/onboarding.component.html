@@ -1,1 +1,116 @@
-<p>onboarding works!</p>
+<div class="container">
+    <div class="container-fluid">
+
+        <div class="d-flex justify-content-between">
+            <div class="title">CUSTOMER ONBOARDING</div>
+            <div class="d-flex">
+                <div class="mr-10px">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">notifications</mat-icon>
+                </div>
+                <div>
+                    <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <div class="w-80p">
+                <div class="d-flex mt-2p">
+                    <div *ngFor="let searchCategory of searchCategories;let i = index"
+                        (click)="getSelecctedCategory(i)">
+                        <button class="btn-rectangle mr-5px opacity-50p"
+                            [ngClass]="{'opacity-100p': i === selectedSearchCategory}">
+                            {{searchCategory.name}}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-flex align-item-center mt-5p">
+                    <div class="sub-title">
+                        Perform Search
+                    </div>
+                    <div class="w-74p ml-2p">
+                        <hr style="border: 1px solid #000000;width: 100%;">
+                    </div>
+                </div>
+
+                <div class="mt-3p">
+                    <mat-card class="w-90p">
+                        <mat-card-content>
+                            <div>
+
+                                <form class="example-form">
+                                    <div class="d-flex justify-content-around mr-10p">
+                                        <div>
+                                            <div class="label-text">First name</div>
+                                            <mat-form-field class="w-150p">
+                                                <input matInput placeholder="Type in your first name" value="">
+                                            </mat-form-field>
+                                        </div>
+                                        <div>
+                                            <div class="label-text">Last name</div>
+                                            <mat-form-field class="w-150p">
+                                                <input matInput placeholder="Type in your last name" value="">
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-around mr-10p mt-3p">
+                                        <div>
+                                            <div class="label-text">Country</div>
+                                            <mat-form-field class="w-150p">
+                                                <mat-label>Favorite food</mat-label>
+                                                <mat-select>
+                                                    <mat-option *ngFor="let country of countries"
+                                                        [value]="country.value">
+                                                        {{country.viewValue}}
+                                                    </mat-option>
+                                                </mat-select>
+                                            </mat-form-field>
+                                        </div>
+                                        <div>
+                                            <div class="label-text">Date of Birth</div>
+                                            <mat-form-field class="w-150p">
+                                                <input matInput [matDatepicker]="picker">
+                                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                                <mat-datepicker #picker></mat-datepicker>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5p d-flex justify-content-center">
+                                        <button mat-button class="search-btn">Search</button>
+                                    </div>
+
+
+                                </form>
+                            </div>
+
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+
+
+            </div>
+
+            <div class="w-20p">
+
+                <div class="mt-53p">
+                    <mat-card class="notice-board">
+                        <mat-card-content>
+                            <p>Know More</p>
+                            <p>
+                                Begin with the basic details of your customer to create instance.
+                                Email ID is mandatory for live onboarding. A remote link access will be provided via
+                                email.Perform end to end due-diligence and checks.You may proceed with the default risk
+                                policy template and make changes later in the
+                                process.
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

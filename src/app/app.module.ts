@@ -4,21 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
+import { OnboardingComponent } from './dashboard/onboarding/onboarding.component';
+
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
+
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatSidenavModule
+    AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

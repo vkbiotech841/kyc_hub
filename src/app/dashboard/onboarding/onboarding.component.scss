@@ -1,0 +1,87 @@
+:host {
+  .btn-rectangle {
+    background-color: #ffffff;
+    border: none;
+    width: 226px;
+    height: 45px;
+    cursor: pointer;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .opacity-50p {
+    opacity: 0.5;
+  }
+
+  .opacity-100p {
+    opacity: 1;
+  }
+
+  .title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+  }
+
+  .sub-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+
+    color: #000000;
+  }
+
+  .notice-board {
+    // max-width: 400px;
+    // width: 320px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .label-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+  }
+
+  .search-btn {
+    width: 145.94px;
+    height: 45px;
+    background: #0094ff;
+    border: none;
+    cursor: pointer;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  ::ng-deep {
+    .mat-grid-tile-content {
+      justify-content: left !important;
+    }
+  }
+}

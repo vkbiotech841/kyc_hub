@@ -1,6 +1,8 @@
 <mat-drawer-container class="example-container">
     <mat-drawer mode="side" opened>
-        <img src="assets/images/kyc_hub_logo.svg" alt="">
+        <ul class="logo-position">
+            <img src="assets/images/sidenav/kyc_hub_logo.png" alt="" class="w-100px">
+        </ul>
 
         <ul class="sidenav-containt pl-10px pr-10px" *ngFor="let navbarItem of sidenavContents;let i = index"
             (click)="getSelectedTabIndex(i)" [routerLink]="navbarItem.link">
