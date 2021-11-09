@@ -1,0 +1,39 @@
+:host {
+  .example-container {
+    width: 100%;
+    height: 100%;
+    background-color: #e5e5e5;
+  }
+
+  .mat-drawer {
+    width: 240px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+  }
+
+  .sidenav-containt {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+  }
+
+  .fs-20px {
+    font-size: 20px;
+  }
+
+  .background-on-hover {
+    background-color: #0094ff;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}

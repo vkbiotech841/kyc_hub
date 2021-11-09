@@ -1,0 +1,255 @@
+// Margin & Padding classes
+// Uses examples:
+
+////////// MARGIN ////////////////////////
+
+// overall margin: m-1rem, m-1px, m-1p
+// margin-top: mt-1rem, mt-1px, mt-1p
+// margin-bottom: mb-1rem, mb-1px, mb-1p
+// margin-left: ml-1rem, ml-1px, ml-1p
+// margin-right: mr-1rem, mr-1px, mr-1p
+
+////////// PADDING //////////////////////
+
+// overall padding: p-1rem, p-1px, p-1p
+// padding-top: pt-1rem, pt-1px, pt-1p
+// padding-bottom: pb-1rem, pb-1px, pb-1p
+// padding-left: pl-1rem, pl-1px, pl-1p
+// padding-right: pr-1rem, pr-1px, pr-1p
+
+$spaceamounts: (
+	0,
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	16,
+	17,
+	18,
+	19,
+	20,
+	21,
+	22,
+	23,
+	24,
+	25,
+	26,
+	27,
+	28,
+	29,
+	30,
+	31,
+	32,
+	33,
+	34,
+	35,
+	36,
+	37,
+	38,
+	39,
+	40,
+	41,
+	42,
+	43,
+	44,
+	45,
+	46,
+	47,
+	48,
+	49,
+	50,
+	51,
+	52,
+	53,
+	54,
+	55,
+	56,
+	57,
+	58,
+	59,
+	60,
+	61,
+	62,
+	63,
+	64,
+	65,
+	66,
+	67,
+	68,
+	69,
+	70,
+	71,
+	72,
+	73,
+	74,
+	75,
+	76,
+	77,
+	78,
+	79,
+	80,
+	81,
+	82,
+	83,
+	84,
+	85,
+	86,
+	87,
+	88,
+	89,
+	90,
+	91,
+	92,
+	93,
+	94,
+	95,
+	96,
+	97,
+	98,
+	99,
+	100
+);
+
+$px: 'px';
+$rem: 'rem';
+$percentage: '%';
+$p: 'p';
+$vh: 'vh';
+$wh: 'wh';
+
+@each $space in $spaceamounts {
+	.m-#{$space}#{$rem} {
+		margin: #{$space}#{$rem};
+	}
+
+	.m-#{$space}#{$px} {
+		margin: #{$space}#{$px};
+	}
+
+	.m-#{$space}#{$p} {
+		margin: #{$space}#{$percentage};
+	}
+
+	.mt-#{$space}#{$rem} {
+		margin-top: #{$space}#{$rem};
+	}
+
+	.mt-#{$space}#{$px} {
+		margin-top: #{$space}#{$px};
+	}
+
+	.mt-#{$space}#{$p} {
+		margin-top: #{$space}#{$percentage};
+	}
+
+	.mt-#{$space}#{$vh} {
+		margin-top: #{$space}#{$vh};
+	}
+
+	.mb-#{$space}#{$rem} {
+		margin-bottom: #{$space}#{$rem};
+	}
+
+	.mb-#{$space}#{$px} {
+		margin-bottom: #{$space}#{$px};
+	}
+
+	.mb-#{$space}#{$p} {
+		margin-bottom: #{$space}#{$percentage};
+	}
+
+	.ml-#{$space}#{$rem} {
+		margin-left: #{$space}#{$rem};
+	}
+
+	.ml-#{$space}#{$px} {
+		margin-left: #{$space}#{$px};
+	}
+
+	.ml-#{$space}#{$p} {
+		margin-left: #{$space}#{$percentage};
+	}
+
+	.mr-#{$space}#{$rem} {
+		margin-right: #{$space}#{$rem};
+	}
+
+	.mr-#{$space}#{$px} {
+		margin-right: #{$space}#{$px};
+	}
+
+	.mr-#{$space}#{$p} {
+		margin-right: #{$space}#{$percentage};
+	}
+
+	.p-#{$space}#{$rem} {
+		padding: #{$space}#{$rem};
+	}
+
+	.p-#{$space}#{$px} {
+		padding: #{$space}#{$px};
+	}
+
+	.p-#{$space}#{$p} {
+		padding: #{$space}#{$percentage};
+	}
+
+	.pt-#{$space}#{$rem} {
+		padding-top: #{$space}#{$rem};
+	}
+
+	.pt-#{$space}#{$px} {
+		padding-top: #{$space}#{$px};
+	}
+
+	.pt-#{$space}#{$p} {
+		padding-top: #{$space}#{$percentage};
+	}
+
+	.pb-#{$space}#{$rem} {
+		padding-bottom: #{$space}#{$rem};
+	}
+
+	.pb-#{$space}#{$px} {
+		padding-bottom: #{$space}#{$px};
+	}
+
+	.pb-#{$space}#{$p} {
+		padding-bottom: #{$space}#{$percentage};
+	}
+
+	.pl-#{$space}#{$rem} {
+		padding-left: #{$space}#{$rem};
+	}
+
+	.pl-#{$space}#{$px} {
+		padding-left: #{$space}#{$px};
+	}
+
+	.pl-#{$space}#{$p} {
+		padding-left: #{$space}#{$percentage};
+	}
+
+	.pr-#{$space}#{$rem} {
+		padding-right: #{$space}#{$rem};
+	}
+
+	.pr-#{$space}#{$px} {
+		padding-right: #{$space}#{$px};
+	}
+
+	.pr-#{$space}#{$p} {
+		padding-right: #{$space}#{$percentage};
+	}
+}

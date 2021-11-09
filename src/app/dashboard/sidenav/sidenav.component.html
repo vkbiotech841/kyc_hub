@@ -1,0 +1,17 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <img src="assets/images/kyc_hub_logo.svg" alt="">
+
+        <ul class="sidenav-containt pl-10px pr-10px" *ngFor="let navbarItem of sidenavContents;let i = index"
+            (click)="getSelectedTabIndex(i)" [routerLink]="navbarItem.link">
+            <div [ngClass]="{'background-on-hover': selectectedIndex === i}" class="pl-40px cursor-pointer">
+                <img [src]="navbarItem.imageUrl" alt="" class="w-17px">
+                <span class="ml-10p">{{navbarItem.name}}</span>
+            </div>
+        </ul>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
