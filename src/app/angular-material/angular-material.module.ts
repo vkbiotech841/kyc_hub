@@ -11,6 +11,7 @@ import { MatDatepickerModule, } from '@angular/material/datepicker';
 
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -28,7 +29,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   exports: [
     MatSliderModule,
@@ -40,7 +42,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ]
 })
 export class AngularMaterialModule { }

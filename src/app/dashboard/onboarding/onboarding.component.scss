@@ -120,6 +120,10 @@
     min-height: 135px;
   }
 
+  table {
+    width: 100%;
+  }
+
   ::ng-deep {
     .mat-grid-tile-content {
       justify-content: left !important;
