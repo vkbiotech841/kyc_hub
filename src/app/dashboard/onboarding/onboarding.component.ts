@@ -79,7 +79,7 @@ export class OnboardingComponent implements OnInit {
     });
   }
 
-
+  public isFormSubmited: boolean = false;
   public submitUserDetails() {
     this.fullNameArray = [];
     this.countryArray = [];
@@ -105,6 +105,8 @@ export class OnboardingComponent implements OnInit {
       this.onboardingService.getOnboardingData(data)
         .pipe(takeUntil(this.unsubscriber$))
         .subscribe(result => {
+
+          this.isFormSubmited = true;
           this.searchResult = result.data.content;
           console.log("vikram", result.data.content);
           this.filteredUserDetails = [];
@@ -120,6 +122,8 @@ export class OnboardingComponent implements OnInit {
             this.filteredUserDetails.push(userData);
           })
           this.dataSource = this.filteredUserDetails;
+        }, error => {
+          console.log("error", error);
         })
 
 

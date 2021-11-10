@@ -100,7 +100,7 @@
                 </div>
 
 
-                <div class="mt-3p">
+                <div class="mt-3p" *ngIf="dataSource.length > 0;else noSearchData">
                     <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
 
                         <ng-container matColumnDef="name">
@@ -136,6 +136,21 @@
                         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                     </table>
                 </div>
+
+                <ng-template #noSearchData>
+                    <div class="mt-5p" *ngIf="isFormSubmited && dataSource.length === 0;">
+                        <div class="d-flex justify-content-center">
+                            No results found for the Individual.
+                            Begin Onboarding process by creating Profile or contact Support.
+                        </div>
+                        <div class="d-flex justify-content-center mt-2p">
+                            <button mat-button class="create-profile-btn ">Create Profile</button>
+                        </div>
+                    </div>
+
+                </ng-template>
+
+
 
                 <div class="w-94p mt-5p">
                     <div class="d-flex">
