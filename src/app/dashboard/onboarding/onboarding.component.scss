@@ -79,6 +79,47 @@
     color: #ffffff;
   }
 
+  .create-profile-btn {
+    width: 242.06px;
+    height: 45px;
+    background: #e54c0a;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  .search-adverse-media-btn {
+    width: 293.94px;
+    height: 35px;
+    background: #0094ff;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #ffffff;
+  }
+
+  .general-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #000000;
+  }
+
+  .card-height {
+    min-height: 135px;
+  }
+
   ::ng-deep {
     .mat-grid-tile-content {
       justify-content: left !important;
