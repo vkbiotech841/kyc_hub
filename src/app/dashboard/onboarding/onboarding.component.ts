@@ -24,24 +24,18 @@ import { Subject } from 'rxjs/internal/Subject';
 //   { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 // ];
 
-export interface PeriodicElement {
+export interface SearchedUser {
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  category: any;
+  country: string;
+  source: string;
+  riskStatus: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
+const ELEMENT_DATA: SearchedUser[] = [
+  { name: 'Hydrogen', category: 'h', country: 'H', source: 'j', riskStatus: 'k' },
+  { name: 'Hydrogen', category: 'h', country: 'H', source: 'j', riskStatus: 'k' },
+  { name: 'Hydrogen', category: 'h', country: 'H', source: 'j', riskStatus: 'k' },
 ];
 
 @Component({
@@ -51,8 +45,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class OnboardingComponent implements OnInit {
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  public displayedColumns: string[] = ['name', 'category', 'country', 'source', 'riskStatus'];
+  public dataSource: SearchedUser[] = [];
 
   public searchCategories = [
     { name: 'Entity Search' },
@@ -76,9 +70,6 @@ export class OnboardingComponent implements OnInit {
 
   public fullNameArray: string[] = [];
   public countryArray: string[] = [];
-
-
-
   private unsubscriber$ = new Subject();
 
 
@@ -147,11 +138,12 @@ export class OnboardingComponent implements OnInit {
               category: result.details[0].category?.name,
               country: result.details[0].rawData.country,
               source: result.details[0].datasource.name,
-              riskStatus: result.details[0].rawData.riskLevel
+              riskStatus: result.details[0].rawData.status
             }
             this.filteredUserDetails.push(userData);
-            console.log("filteredUserDetails", this.filteredUserDetails);
           })
+          console.log("filteredUserDetails", this.filteredUserDetails);
+          this.dataSource = this.filteredUserDetails;
         })
 
 
